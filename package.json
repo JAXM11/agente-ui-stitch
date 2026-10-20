@@ -1,0 +1,18 @@
+{
+  "name": "agente-ui-stitch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agente con OpenRouter gratuito y Stitch MCP en un solo archivo",
+  "type": "module",
+  "scripts": {
+    "start": "node agente.js",
+    "check": "node agente.js --check"
+  },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "@google/stitch-sdk": "0.3.5",
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "dotenv": "18.0.8",
+    "openai": "7.39.0"
+  }
+}

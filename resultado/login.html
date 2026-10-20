@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Iniciar sesión - Acceso Seguro</title>
+<!-- Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "background": "#f9f9ff",
+            "on-secondary-fixed-variant": "#891d12",
+            "on-tertiary-fixed": "#000d60",
+            "on-tertiary-container": "#9ea9ff",
+            "tertiary-container": "#0025c8",
+            "inverse-primary": "#ffb4a8",
+            "surface": "#f9f9ff",
+            "on-error-container": "#93000a",
+            "outline": "#8e706b",
+            "surface-tint": "#b52619",
+            "secondary-fixed": "#ffdad4",
+            "on-surface-variant": "#5a403c",
+            "error": "#ba1a1a",
+            "inverse-surface": "#293040",
+            "surface-variant": "#dce2f7",
+            "on-error": "#ffffff",
+            "surface-bright": "#f9f9ff",
+            "inverse-on-surface": "#edf0ff",
+            "secondary": "#aa3527",
+            "surface-container-highest": "#dce2f7",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#410000",
+            "on-primary": "#ffffff",
+            "on-surface": "#141b2b",
+            "surface-container-low": "#f1f3ff",
+            "surface-container-high": "#e1e8fd",
+            "on-primary-fixed": "#410000",
+            "primary-fixed-dim": "#ffb4a8",
+            "outline-variant": "#e3beb8",
+            "primary-fixed": "#ffdad4",
+            "secondary-container": "#fe725f",
+            "secondary-fixed-dim": "#ffb4a8",
+            "on-background": "#141b2b",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "primary-container": "#8b0000",
+            "on-tertiary-fixed-variant": "#0d2ccc",
+            "error-container": "#ffdad6",
+            "on-primary-fixed-variant": "#920703",
+            "surface-dim": "#d3daef",
+            "tertiary-fixed-dim": "#bcc3ff",
+            "on-secondary-container": "#6f0703",
+            "on-primary-container": "#ff907f",
+            "tertiary": "#00178d",
+            "tertiary-fixed": "#dfe0ff",
+            "surface-container": "#e9edff",
+            "primary": "#610000"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "1rem",
+            "gutter-desktop": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "margin-desktop": "2rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1rem"
+          },
+          "fontFamily": {
+            "body-md": ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "label-md": ["Inter"],
+            "label-sm": ["Inter"],
+            "body-lg": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-md": ["Inter"],
+            "headline-lg": ["Inter"],
+            "label-lg": ["Inter"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+            "label-lg": ["15px", { "lineHeight": "20px", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#F5F5F7] min-h-full flex flex-col font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-white">
+<!-- Shared Component: TopNavBar -->
+<header class="bg-surface shadow-sm w-full">
+<div class="flex justify-between items-center w-full px-4 md:px-8 max-w-7xl mx-auto h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container select-none" data-icon="shield_lock" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+<span class="text-headline-md font-headline-md font-bold text-primary">Acceso Seguro</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="Ayuda" class="p-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary-container" type="button">
+<span class="material-symbols-outlined select-none" data-icon="help_outline">help_outline</span>
+</button>
+<button aria-label="Modo de color" class="p-2 rounded-lg text-on-surface-variant hover:text-primary transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary-container" id="theme-toggle" type="button">
+<span class="material-symbols-outlined select-none" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas: Centered Login View -->
+<main class="flex-grow flex items-center justify-center p-4 sm:p-6 md:p-8">
+<div class="w-full max-w-[400px] bg-white rounded-2xl shadow-[0_10px_25px_-5px_rgba(0,0,0,0.04),0_8px_10px_-6px_rgba(0,0,0,0.04)] border border-black/[0.03] p-8 md:p-10 transition-all duration-200 hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.06),0_10px_10px_-5px_rgba(0,0,0,0.03)]">
+<!-- 1. Encabezado -->
+<div class="flex flex-col items-center text-center mb-6">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary-container mb-3.5 shadow-sm">
+<span class="material-symbols-outlined text-2xl select-none" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<h1 class="text-headline-md font-headline-md font-bold text-[#111827] tracking-tight">Iniciar sesión</h1>
+<p class="text-body-md font-body-md text-[#4B5563] mt-1">Accede a tu cuenta</p>
+</div>
+<!-- 2. Formulario -->
+<form class="space-y-5" id="login-form" novalidate="" onsubmit="event.preventDefault(); handleLoginSubmit();">
+<!-- Campo 1: Usuario -->
+<div>
+<label class="block text-label-md font-label-md text-gray-800 mb-1.5" for="username">
+            Usuario
+          </label>
+<div class="relative">
+<input autocomplete="username" class="w-full h-12 px-3.5 bg-white border border-gray-300 rounded-lg text-body-md font-body-md text-gray-900 placeholder:text-gray-400 focus:border-[#8B0000] focus:ring-2 focus:ring-[#8B0000] focus:ring-offset-2 focus:outline-none transition-all duration-150" id="username" name="username" placeholder="ej. usuario@correo.com" required="" type="text"/>
+</div>
+<p aria-live="polite" class="hidden text-body-sm font-body-sm text-error mt-1.5 flex items-center gap-1" id="username-error">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Por favor, introduce tu usuario o correo electrónico.</span>
+</p>
+</div>
+<!-- Campo 2: Contraseña -->
+<div>
+<label class="block text-label-md font-label-md text-gray-800 mb-1.5" for="password">
+            Contraseña
+          </label>
+<div class="relative">
+<input autocomplete="current-password" class="w-full h-12 pl-3.5 pr-11 bg-white border border-gray-300 rounded-lg text-body-md font-body-md text-gray-900 placeholder:text-gray-400 focus:border-[#8B0000] focus:ring-2 focus:ring-[#8B0000] focus:ring-offset-2 focus:outline-none transition-all duration-150" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button aria-label="Mostrar contraseña" class="absolute inset-y-0 right-0 flex items-center justify-center w-11 h-12 text-gray-500 hover:text-gray-900 focus:outline-none focus:text-[#8B0000]" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-xl select-none" data-icon="visibility" id="password-icon">visibility</span>
+</button>
+</div>
+<p aria-live="polite" class="hidden text-body-sm font-body-sm text-error mt-1.5 flex items-center gap-1" id="password-error">
+<span class="material-symbols-outlined text-sm" data-icon="error">error</span>
+<span>Por favor, introduce tu contraseña.</span>
+</p>
+</div>
+<!-- Opciones y casilla de verificación -->
+<div class="flex items-center justify-between pt-0.5">
+<label class="flex items-center gap-2.5 cursor-pointer select-none" for="remember-me">
+<input checked="" class="w-[18px] h-[18px] rounded border-gray-300 text-[#8B0000] focus:ring-2 focus:ring-[#8B0000] focus:ring-offset-2 transition-all cursor-pointer" id="remember-me" name="remember-me" type="checkbox"/>
+<span class="text-body-md font-body-md text-gray-700">Recordar sesión siempre</span>
+</label>
+</div>
+<!-- Botón principal de acción -->
+<div class="pt-1.5">
+<button class="w-full h-12 px-4 rounded-lg font-label-lg text-label-lg font-semibold text-white bg-[#8B0000] hover:bg-[#6f0000] active:scale-[0.99] transition-all duration-150 shadow-sm focus:ring-2 focus:ring-[#8B0000] focus:ring-offset-2 focus:outline-none flex items-center justify-center" id="submit-btn" type="submit">
+            Iniciar sesión
+          </button>
+</div>
+</form>
+<!-- 3. Enlaces secundarios debajo del botón -->
+<div class="mt-6 pt-5 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-body-sm font-body-sm">
+<a class="text-[#8B0000] hover:underline focus:outline-none focus:ring-2 focus:ring-[#8B0000] focus:ring-offset-1 rounded transition-colors" href="#recuperar">
+          ¿Olvidé mi contraseña?
+        </a>
+<div class="flex items-center gap-1 text-gray-600">
+<span>¿No tienes cuenta?</span>
+<a class="text-[#8B0000] font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-[#8B0000] focus:ring-offset-1 rounded transition-colors" href="#registro">
+            Registrarse
+          </a>
+</div>
+</div>
+<!-- 4. Nota informativa de prototipo -->
+<div class="mt-6 p-3 rounded-lg bg-gray-50 border border-gray-200/60 text-center">
+<p class="text-body-sm font-body-sm text-gray-500 leading-relaxed">
+          Prototipo de interfaz — no se envían ni almacenan contraseñas reales; sin autenticación, MFA ni TLS reales.
+        </p>
+</div>
+</div>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-surface shadow-sm w-full mt-auto">
+<div class="w-full py-6 px-4 md:px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<div class="text-label-md font-label-md font-semibold text-on-surface">
+        © 2024 Prototipo de Interfaz. Todos los derechos reservados.
+      </div>
+<nav aria-label="Enlaces de pie de página" class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary hover:underline transition-colors duration-150" href="#privacidad">Privacidad</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary hover:underline transition-colors duration-150" href="#terminos">Términos y Condiciones</a>
+<a class="text-label-sm font-label-sm text-on-surface-variant hover:text-primary hover:underline transition-colors duration-150" href="#soporte">Ayuda y Soporte</a>
+</nav>
+</div>
+</footer>
+<!-- Micro-interactions Script -->
+<script>
+    const passwordInput = document.getElementById('password');
+    const toggleButton = document.getElementById('toggle-password');
+    const passwordIcon = document.getElementById('password-icon');
+
+    // Toggle Password Visibility
+    if (toggleButton && passwordInput && passwordIcon) {
+      toggleButton.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        if (isPassword) {
+          passwordInput.setAttribute('type', 'text');
+          passwordIcon.textContent = 'visibility_off';
+          toggleButton.setAttribute('aria-label', 'Ocultar contraseña');
+        } else {
+          passwordInput.setAttribute('type', 'password');
+          passwordIcon.textContent = 'visibility';
+          toggleButton.setAttribute('aria-label', 'Mostrar contraseña');
+        }
+      });
+    }
+
+    // Accessible Feedback Submission Handler
+    function handleLoginSubmit() {
+      const usernameInput = document.getElementById('username');
+      const usernameError = document.getElementById('username-error');
+      const passwordError = document.getElementById('password-error');
+      const submitBtn = document.getElementById('submit-btn');
+
+      let hasError = false;
+
+      if (!usernameInput.value.trim()) {
+        usernameError.classList.remove('hidden');
+        usernameInput.classList.add('border-error');
+        hasError = true;
+      } else {
+        usernameError.classList.add('hidden');
+        usernameInput.classList.remove('border-error');
+      }
+
+      if (!passwordInput.value) {
+        passwordError.classList.remove('hidden');
+        passwordInput.classList.add('border-error');
+        hasError = true;
+      } else {
+        passwordError.classList.add('hidden');
+        passwordInput.classList.remove('border-error');
+      }
+
+      if (!hasError) {
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-lg mr-2 select-none" data-icon="progress_activity">progress_activity</span> Verificando...';
+        
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Acceso Simulado Exitoso';
+          submitBtn.classList.remove('bg-[#8B0000]', 'hover:bg-[#6f0000]');
+          submitBtn.classList.add('bg-emerald-700', 'hover:bg-emerald-800');
+
+          setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.classList.add('bg-[#8B0000]', 'hover:bg-[#6f0000]');
+            submitBtn.classList.remove('bg-emerald-700', 'hover:bg-emerald-800');
+          }, 2400);
+        }, 1000);
+      }
+    }
+  </script>
+</body></html>
